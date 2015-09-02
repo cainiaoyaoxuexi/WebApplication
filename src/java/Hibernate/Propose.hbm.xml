@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Propose" table="PROPOSE" schema="CODEVA_STELIA_AIRBUS">
+        <composite-id name="id" class="Hibernate.ProposeId">
+            <key-property name="iduser" type="string">
+                <column name="IDUSER" length="15" />
+            </key-property>
+            <key-property name="numberneg" type="short">
+                <column name="NUMBERNEG" precision="4" scale="0" />
+            </key-property>
+            <key-property name="datepro" type="timestamp">
+                <column name="DATEPRO" length="20" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="partnegotiation" class="Hibernate.Partnegotiation" update="false" insert="false" fetch="select">
+            <column name="NUMBERNEG" precision="4" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="Hibernate.Users" update="false" insert="false" fetch="select">
+            <column name="IDUSER" length="15" not-null="true" />
+        </many-to-one>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="22" scale="0" />
+        </property>
+        <property name="pricestatus" type="string">
+            <column name="PRICESTATUS" length="30" />
+        </property>
+        <property name="startval" type="date">
+            <column name="STARTVAL" length="7" />
+        </property>
+        <property name="endval" type="date">
+            <column name="ENDVAL" length="7" />
+        </property>
+        <property name="matprice" type="big_decimal">
+            <column name="MATPRICE" precision="22" scale="0" />
+        </property>
+        <property name="labprice" type="big_decimal">
+            <column name="LABPRICE" precision="22" scale="0" />
+        </property>
+        <property name="otherprice" type="big_decimal">
+            <column name="OTHERPRICE" precision="22" scale="0" />
+        </property>
+        <property name="commentpart" type="string">
+            <column name="COMMENTPART" length="500" />
+        </property>
+        <property name="typecompart" type="string">
+            <column name="TYPECOMPART" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

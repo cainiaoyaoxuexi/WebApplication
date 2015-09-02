@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="CODEVA_STELIA_AIRBUS"/>
+  <table-filter match-name="POSITIONS"/>
+  <table-filter match-name="USERS"/>
+  <table-filter match-name="PROPOSEPERCENT"/>
+  <table-filter match-name="COMPANY"/>
+  <table-filter match-name="NOTIFYMASS"/>
+  <table-filter match-name="TITLE"/>
+  <table-filter match-name="NOTIFY"/>
+  <table-filter match-name="PROPOSE"/>
+  <table-filter match-name="DOCUMENTS"/>
+  <table-filter match-name="PARTNEGOTIATION"/>
+  <table-filter match-name="PART"/>
+  <table-filter match-name="POST"/>
+  <table-filter match-name="MASSNEGOTIATION"/>
+  <table-filter match-name="TECHNOLOGY"/>
+</hibernate-reverse-engineering>

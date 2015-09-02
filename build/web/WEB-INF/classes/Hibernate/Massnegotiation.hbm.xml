@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Massnegotiation" table="MASSNEGOTIATION" schema="CODEVA_STELIA_AIRBUS">
+        <id name="numbernegmass" type="short">
+            <column name="NUMBERNEGMASS" precision="4" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="technology" class="Hibernate.Technology" fetch="select">
+            <column name="TECHNOCODE" length="4" not-null="true" />
+        </many-to-one>
+        <property name="finalpercent" type="big_decimal">
+            <column name="FINALPERCENT" precision="22" scale="0" />
+        </property>
+        <property name="temporarypercent" type="big_decimal">
+            <column name="TEMPORARYPERCENT" precision="22" scale="0" />
+        </property>
+        <property name="entrydatemass" type="date">
+            <column name="ENTRYDATEMASS" length="7" />
+        </property>
+        <property name="negomassstatus" type="string">
+            <column name="NEGOMASSSTATUS" length="30" />
+        </property>
+        <property name="datevalidatemass" type="date">
+            <column name="DATEVALIDATEMASS" length="7" />
+        </property>
+        <set name="proposepercents" table="PROPOSEPERCENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMBERNEGMASS" precision="4" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Proposepercent" />
+        </set>
+        <set name="notifymasses" table="NOTIFYMASS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMBERNEGMASS" precision="4" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Notifymass" />
+        </set>
+    </class>
+</hibernate-mapping>

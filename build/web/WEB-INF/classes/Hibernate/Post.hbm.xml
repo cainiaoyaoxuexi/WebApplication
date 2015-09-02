@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Post" table="POST" schema="CODEVA_STELIA_AIRBUS">
+        <composite-id name="id" class="Hibernate.PostId">
+            <key-property name="iduser" type="string">
+                <column name="IDUSER" length="15" />
+            </key-property>
+            <key-property name="codedoc" type="int">
+                <column name="CODEDOC" precision="8" scale="0" />
+            </key-property>
+            <key-property name="numberneg" type="short">
+                <column name="NUMBERNEG" precision="4" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="partnegotiation" class="Hibernate.Partnegotiation" update="false" insert="false" fetch="select">
+            <column name="NUMBERNEG" precision="4" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="documents" class="Hibernate.Documents" update="false" insert="false" fetch="select">
+            <column name="CODEDOC" precision="8" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="Hibernate.Users" update="false" insert="false" fetch="select">
+            <column name="IDUSER" length="15" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

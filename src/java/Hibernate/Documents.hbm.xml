@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Documents" table="DOCUMENTS" schema="CODEVA_STELIA_AIRBUS">
+        <id name="codedoc" type="int">
+            <column name="CODEDOC" precision="8" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="type" type="string">
+            <column name="TYPE" length="20" />
+        </property>
+        <property name="doc" type="blob">
+            <column name="DOC" />
+        </property>
+        <property name="datedoc" type="date">
+            <column name="DATEDOC" length="7" />
+        </property>
+        <set name="posts" table="POST" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CODEDOC" precision="8" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Post" />
+        </set>
+    </class>
+</hibernate-mapping>

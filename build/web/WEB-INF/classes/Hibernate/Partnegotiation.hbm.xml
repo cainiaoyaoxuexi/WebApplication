@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Partnegotiation" table="PARTNEGOTIATION" schema="CODEVA_STELIA_AIRBUS">
+        <id name="numberneg" type="short">
+            <column name="NUMBERNEG" precision="4" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="part" class="Hibernate.Part" fetch="select">
+            <column name="NUMBERPART" length="20" not-null="true" />
+        </many-to-one>
+        <property name="temporaryprice" type="big_decimal">
+            <column name="TEMPORARYPRICE" precision="22" scale="0" />
+        </property>
+        <property name="finalprice" type="big_decimal">
+            <column name="FINALPRICE" precision="22" scale="0" />
+        </property>
+        <property name="firstdate" type="date">
+            <column name="FIRSTDATE" length="7" />
+        </property>
+        <property name="firstquantity" type="java.lang.Short">
+            <column name="FIRSTQUANTITY" precision="4" scale="0" />
+        </property>
+        <property name="entrydate" type="date">
+            <column name="ENTRYDATE" length="7" />
+        </property>
+        <property name="devises" type="string">
+            <column name="DEVISES" length="8" />
+        </property>
+        <property name="negostatus" type="string">
+            <column name="NEGOSTATUS" length="30" />
+        </property>
+        <property name="datevalidate" type="date">
+            <column name="DATEVALIDATE" length="7" />
+        </property>
+        <property name="daterefuse" type="date">
+            <column name="DATEREFUSE" length="7" />
+        </property>
+        <property name="datecancel" type="date">
+            <column name="DATECANCEL" length="7" />
+        </property>
+        <set name="notifies" table="NOTIFY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMBERNEG" precision="4" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Notify" />
+        </set>
+        <set name="proposes" table="PROPOSE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMBERNEG" precision="4" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Propose" />
+        </set>
+        <set name="posts" table="POST" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUMBERNEG" precision="4" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Post" />
+        </set>
+    </class>
+</hibernate-mapping>

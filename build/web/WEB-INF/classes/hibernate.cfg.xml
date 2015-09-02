@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@etu-ora2.ut-capitole.fr:1550:igsi</property>
+    <property name="hibernate.connection.username">Codeva_Stelia_Airbus</property>
+    <property name="hibernate.connection.password">codeva</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="Hibernate/Proposepercent.hbm.xml"/>
+    <mapping resource="Hibernate/Part.hbm.xml"/>
+    <mapping resource="Hibernate/Notify.hbm.xml"/>
+    <mapping resource="Hibernate/Company.hbm.xml"/>
+    <mapping resource="Hibernate/Documents.hbm.xml"/>
+    <mapping resource="Hibernate/Technology.hbm.xml"/>
+    <mapping resource="Hibernate/Users.hbm.xml"/>
+    <mapping resource="Hibernate/Notifymass.hbm.xml"/>
+    <mapping resource="Hibernate/Post.hbm.xml"/>
+    <mapping resource="Hibernate/Partnegotiation.hbm.xml"/>
+    <mapping resource="Hibernate/Massnegotiation.hbm.xml"/>
+    <mapping resource="Hibernate/Propose.hbm.xml"/>
+    <mapping resource="Hibernate/Positions.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

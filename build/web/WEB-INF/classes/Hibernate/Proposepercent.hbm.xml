@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 mars 2015 15:50:04 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Proposepercent" table="PROPOSEPERCENT" schema="CODEVA_STELIA_AIRBUS">
+        <composite-id name="id" class="Hibernate.ProposepercentId">
+            <key-property name="iduser" type="string">
+                <column name="IDUSER" length="15" />
+            </key-property>
+            <key-property name="numbernegmass" type="short">
+                <column name="NUMBERNEGMASS" precision="4" scale="0" />
+            </key-property>
+            <key-property name="datepercent" type="date">
+                <column name="DATEPERCENT" length="7" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="massnegotiation" class="Hibernate.Massnegotiation" update="false" insert="false" fetch="select">
+            <column name="NUMBERNEGMASS" precision="4" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="Hibernate.Users" update="false" insert="false" fetch="select">
+            <column name="IDUSER" length="15" not-null="true" />
+        </many-to-one>
+        <property name="percent" type="big_decimal">
+            <column name="PERCENT" precision="22" scale="0" />
+        </property>
+        <property name="commentmass" type="string">
+            <column name="COMMENTMASS" length="500" />
+        </property>
+        <property name="typecommass" type="string">
+            <column name="TYPECOMMASS" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,269 @@
+body {
+    margin: auto;
+    padding: 0;
+    background: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    width:100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: #B8B8B8;
+    font-size: 10px;
+    color: #333333;
+}
+
+.topleft {
+    width: 20%;
+    float: left;
+    text-align: left;
+    margin: 0;
+    padding: 3px 0px 3px 15px;
+}
+
+.topright {
+    width: 78%;
+    float: left;
+    text-align: right;
+    margin: 0;
+    padding: 3px 14px 3px 0px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    background: #6593b5;
+    height: 69px;
+}
+
+nav {
+    width: 99.9%;
+    background: #333366;
+    margin: 1px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 8pt;
+    float: left;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav a:link,
+nav a:visited {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+nav a {
+    display:block;
+    background: #333366;
+    padding: 2px 3px;
+}
+
+nav a:hover {
+    background: #6593b5;
+}
+
+nav li {
+    margin:0px 1px 0px 0px;
+    padding: 0;
+    width: 159px;
+    float: left;
+    position: relative;
+    text-align: left;
+    border-width: 1px;
+    border-right-color: #ffffff;
+}
+
+nav ul:hover {
+    background:#6593b5;
+}
+
+
+
+section {
+    width: 770px;
+    margin: 30px auto 0px auto;
+    padding: 0;
+}
+
+    .hgroup{
+        float: left;
+    }
+
+        .logo{
+            float:left;
+            margin-right: 10px;
+            padding:0;
+        }
+
+        h3 {
+            float:left;
+            width: 80%;
+            margin:10px 0px 0px 0px;
+            padding:0;
+            font-size: 24px;
+            color: #BBBBBB;
+            font-weight: normal;
+        }
+
+        h4 {
+            float:left;
+            width: 80%;
+            margin:0;
+            padding:0;
+            font-size: 13px;
+            font-weight: bold;
+            color: #6593b5;
+        }
+
+    article {
+        float: left;
+        margin: 30px auto; 
+        width: 700px;
+        font-size: 13px;
+        color: #333366;
+    }
+
+
+        .negolist {
+            width: 700px;
+            height: 500px;
+            margin: 15px 0px; 
+            overflow: auto;
+            overflow-y: scroll;
+        }
+        
+        button {
+            background: #ffffff;
+            border: none;
+        }
+        
+        button :hover {
+            background: #dddddd;
+        }
+
+        .information {
+            width: 50%;
+            float: left;
+            height: 300px;
+
+        }
+        
+        .depot {
+            width: 90%;
+            float: left;
+            margin-bottom: 10px;
+            height: 150px;
+            overflow: auto;
+            overflow-y: scroll; 
+        }
+
+        .private {
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+            height: 280px;
+            overflow: auto;
+            overflow-y: scroll; 
+        }
+            
+            .secretM {
+                width: 75%;
+                padding: 4px 7px;
+                margin: 4px 0px;
+                float: right;
+                height: auto;
+                border-radius: 5px;
+                background: #BBBBBB;
+            }
+            
+            .secretO {
+                width: 75%;
+                padding: 3px 8px;
+                margin: 4px 0px;
+                float: left;
+                height: auto;
+                border-radius: 5px;
+                background: #CCCCCC;
+            }
+        
+        .letprivate {
+            width: 50%;
+            float: left;
+            height: 30px;
+            margin-bottom: 12px;
+        }
+        
+        .public {
+            float: left;
+            margin: 10px 0px;
+            width: 700px;
+            height: 330px;
+            overflow: auto;
+            overflow-y: scroll;
+        }
+            
+            .commentS {
+                width: 75%;
+                padding: 5px 10px;
+                margin: 8px 0px;
+                float: left;
+                height: auto;
+                border-radius: 5px;
+                background: wheat;
+            }
+            
+            .commentA {
+                width: 75%;
+                padding: 5px 10px;
+                margin: 8px 0px;
+                float: right;
+                height: auto;
+                border-radius: 5px;
+                background: #A4C4DB;
+            }
+        
+        .letpublic {
+            float: left;
+            height: 100px;
+        }
+        .selectadmin {
+	}
+		.selectrole {
+			width: auto;
+			float: left;
+			margin-left: 150px;
+		}
+		
+		.selectaccount {
+			width: auto;
+			float: left;
+			margin: 0px 50px;
+		}
+		
+		.submitamdin {
+			width: auto;
+			float: left;
+		}
+	
+	.createadmin {
+            float: left;
+			margin: 15px 477px;
+	}
+	
+	.newaccount {
+		float: left;
+		margin: 0px 15px 15px 15px;
+	}
